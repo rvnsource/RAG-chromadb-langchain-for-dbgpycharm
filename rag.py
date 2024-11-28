@@ -27,6 +27,12 @@ def load_documents():
 
 documents = load_documents()
 
+# Add custom metadata to each document
+for doc in documents:
+    doc.metadata["author"] = "demo ravi author John Doe"  # Add author field
+    doc.metadata["category"] = "demo ravi Research Paper"  # Add category field
+print(documents)
+
 # ### 3: Split into chunks of text
 def split_text(documents: list[Document]):
     """
